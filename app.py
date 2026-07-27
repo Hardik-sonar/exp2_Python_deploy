@@ -4,7 +4,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template("index.html", title="Flask App", message="Hello from Flask!")
+    return render_template(
+        "index.html",
+        title="Flask App",
+        message="Welcome to your first Flask web app.",
+        features=["Python routing", "HTML templates", "Responsive design"],
+    )
 
 
 if __name__ == "__main__":
